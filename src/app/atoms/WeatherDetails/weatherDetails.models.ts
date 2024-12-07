@@ -1,3 +1,5 @@
 export interface IWeatherDetailsProps {
-  details: string[];
+  humidity?: string;
+  wind?: string;
+  cloud?: string;
 }

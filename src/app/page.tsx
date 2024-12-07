@@ -1,17 +1,19 @@
 "use client";
 
-import { WeatherPrimary } from "./components";
-import usePage from "./page.hook";
 import * as S from "./page.style";
+import { store } from "./store/store";
+import { Dashboard } from "./views";
+import { Provider } from "react-redux";
+import background from './images/background.jpg';
 
 const Home = () => {
-  const { handleClick } = usePage();
-
+  console.log("XX BAKC = ",background);
   return (
-    <S.PageWrapper>
-      <WeatherPrimary />
-      <button onClick={handleClick}>CLICK ME</button>
-    </S.PageWrapper>
+    <Provider store={store}>
+      <S.PageWrapper>
+        <Dashboard />
+      </S.PageWrapper>
+    </Provider>
   );
 };
 

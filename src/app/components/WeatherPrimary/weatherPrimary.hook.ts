@@ -1,47 +1,42 @@
-import { ICurrentResponse, ILocation, useGetCurrent } from "@/app/hooks";
 import { formatDate } from "../components.utils";
+import { useSelector } from "react-redux";
+import { IWeatherData } from "@/app/store/store.models";
+import usePage from "@/app/page.hook";
 import { useState } from "react";
+import { useView } from "@/app/views/views.hook";
 
 const useWeatherPrimary = () => {
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const { getUserLocation } = useView();
+
   const today = new Date();
-  const formattedDate = formatDate(today);
-  const [location, setLocation] = useState<ILocation>();
-  const { refetch: refetchCurrent } = useGetCurrent();
+  const formattedDate: string = formatDate(today);
 
-  const getUserLocation = () => {
-    // if geolocation is supported by the users browser
-    if (navigator.geolocation) {
-      // get the current users location
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          // save the geolocation coordinates in two variables
-          const { latitude, longitude } = position.coords;
-          // update the value of userlocation variable
-          refetchCurrent({
-            city: `${latitude},${longitude}`,
-            onSuccess: (data: ICurrentResponse) => {
-              console.log("current = ", data);
-              setLocation(data?.location);
-            },
-          });
-        },
-        // if there was an error getting the users location
-        (error) => {
-          console.error("Error getting user location:", error);
-        }
-      );
-    }
-    // if geolocation is not supported by the users browser
-    else {
-      console.error("Geolocation is not supported by this browser.");
-    }
-  };
+  const location = useSelector(
+    (state: IWeatherData) => state?.weatherData?.location
+  );
+  const current = useSelector(
+    (state: IWeatherData) => state?.weatherData?.current
+  );
 
+  // on click location
   const handleClick = () => {
     getUserLocation();
   };
 
-  return { handleClick, location, formattedDate };
+  const handleModal = () => {
+    setOpenModal(true);
+  };
+
+  return {
+    current,
+    formattedDate,
+    handleClick,
+    location,
+    handleModal,
+    openModal,
+    setOpenModal,
+  };
 };
 
 export default useWeatherPrimary;

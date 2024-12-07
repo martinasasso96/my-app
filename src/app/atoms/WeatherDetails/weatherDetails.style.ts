@@ -35,3 +35,16 @@ export const Divider = styled.hr`
   @media (min-width: ${breakpoints.desktop}) {
   }
 `;
+
+export const Param = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  @media (min-width: ${breakpoints.tablet}) {
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+  }
+`;

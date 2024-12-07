@@ -10,16 +10,12 @@ import { IForecastProps } from "./models";
  * @returns
  */
 
-export const useGetForecast = ({
-  city,
-  days,
-  onSuccess,
-  onError,
-}: IForecastProps) => {
+export const useGetForecast = () => {
   const options = { method: "GET", headers: { accept: "application/json" } };
-  const input = `${API_LIST.FORECAST}?key=${API_KEY}&q=${city}&days=${days}`;
 
-  const refetch = () => {
+  const refetch = ({ city, days, onSuccess, onError }: IForecastProps) => {
+    const input = `${API_LIST.FORECAST}?key=${API_KEY}&q=${city}&days=${days}&lang=it`;
+
     fetch(input, options)
       .then((response) => response.json())
       .then((data) => {

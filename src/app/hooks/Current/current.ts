@@ -14,7 +14,7 @@ export const useGetCurrent = () => {
   const options = { method: "GET", headers: { accept: "application/json" } };
 
   const refetch = ({ city, onSuccess, onError }: ICurrentProps) => {
-    const input = `${API_LIST.CURRENT}?key=${API_KEY}&q=${city}`;
+    const input = `${API_LIST.CURRENT}?key=${API_KEY}&q=${city}&lang=it`;
 
     fetch(input, options)
       .then((response) => response.json())

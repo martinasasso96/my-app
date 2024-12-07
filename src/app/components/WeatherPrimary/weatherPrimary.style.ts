@@ -2,14 +2,9 @@ import styled from "styled-components";
 import { breakpoints } from "../components.models";
 
 export const Wrap = styled.div`
-  width: 300px;
-  height: 300px;
-  background: rgb(73, 9, 121);
-  background: linear-gradient(
-    0deg,
-    rgba(73, 9, 121, 1) 0%,
-    rgba(0, 164, 255, 1) 100%
-  );
+  background: #6ea9d7;
+  min-width: 300px;
+  height: 350px;
   border-radius: 25px;
   color: white;
   display: flex;
@@ -41,7 +36,23 @@ export const Header = styled.div`
 export const IconButton = styled.button`
   background-color: transparent;
   border: none;
-  
+
+  @media (min-width: ${breakpoints.tablet}) {
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+  }
+`;
+
+export const GeoButton = styled.button`
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  justify-content: end;
+  align-items: flex-end;
+  height: 75px;
+
   @media (min-width: ${breakpoints.tablet}) {
   }
 
@@ -51,7 +62,7 @@ export const IconButton = styled.button`
 
 export const Date = styled.span`
   margin: 0;
-  font-size: 11px;
+  font-size: 15px;
   display: flex;
 
   @media (min-width: ${breakpoints.tablet}) {
@@ -62,7 +73,7 @@ export const Date = styled.span`
 `;
 
 export const City = styled.span`
-  margin: 20px 0 0;
+  margin: 30px 0 0;
   justify-content: center;
   display: flex;
   font-size: 25px;
@@ -75,7 +86,7 @@ export const City = styled.span`
 `;
 
 export const Temperature = styled.span`
-  margin: 20px -20px 0 0;
+  margin: 20px 0 0 0;
   justify-content: center;
   display: flex;
   font-size: 60px;

@@ -1,7 +1,6 @@
+import { ICurrent } from "../Current";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
-interface IForecast {
-  temp_c: string;
-}
 
 interface ILocation {
   lat: number;
@@ -13,12 +12,21 @@ interface ILocation {
   tz_id: string;
 }
 
-interface IForecast {
-  forecastday: { astro: any; date: string; day: any; hour: any }[];
+export interface IForecast {
+  forecastday?: {
+    date: Date;
+    day: {
+      condition: {
+        code: string;
+      };
+      mintemp_c: number;
+      maxtemp_c: number;
+    };
+  }[];
 }
 
 export interface IForecastResponse {
-  current: IForecast;
+  current: ICurrent;
   location: ILocation;
   forecast: IForecast;
 }

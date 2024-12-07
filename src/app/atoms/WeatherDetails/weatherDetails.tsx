@@ -1,14 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import Humidity from "@/app/icons/Humidity/Humidity";
 import { IWeatherDetailsProps } from "./weatherDetails.models";
 import * as S from "./weatherDetails.style";
+import Wind from "@/app/icons/Wind/Wind";
+import Cloud from "@/app/icons/Cloud/Cloud";
 
-export const WeatherDetails = ({ details }: IWeatherDetailsProps) => {
-  const organizedDetails: any = [];
-  details.forEach((d, index) => {
-    organizedDetails.push(<div key={index}>{d}</div>);
-    organizedDetails.push(
-      <S.Divider className="solid" key={`${index}divider`} />
-    );
-  });
-  return <S.Wrap>{organizedDetails?.map((d: string) => d)}</S.Wrap>;
+export const WeatherDetails = ({
+  humidity,
+  wind,
+  cloud,
+}: IWeatherDetailsProps) => {
+  return (
+    <S.Wrap>
+      <S.Param>
+        <Humidity width="20px" height="20px" fill="gray" />
+        <div>{humidity}%</div>
+      </S.Param>
+      <S.Divider className="solid" />
+      <S.Param>
+        <Wind width="20px" height="20px" fill="gray" />
+        <div>{wind} kph</div>
+      </S.Param>
+      <S.Divider className="solid" />
+      <S.Param>
+        <Cloud width="20px" height="20px" fill="gray" />
+        <div>{cloud}%</div>
+      </S.Param>
+    </S.Wrap>
+  );
 };

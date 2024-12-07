@@ -1,15 +1,18 @@
-interface ICurrent {
-  temp_c: string;
+export interface ICurrent {
+  temp_c?: string;
+  wind_kph?: string;
+  humidity?: string;
+  cloud?: string;
 }
 
 export interface ILocation {
-  lat: number;
-  lon: number;
-  country: string;
-  localtime: string;
-  name: string;
-  region: string;
-  tz_id: string;
+  lat?: number;
+  lon?: number;
+  country?: string;
+  localtime?: string;
+  name?: string;
+  region?: string;
+  tz_id?: string;
 }
 
 export interface ICurrentResponse {
