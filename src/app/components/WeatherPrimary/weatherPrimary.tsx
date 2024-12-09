@@ -3,22 +3,13 @@ import * as S from "./weatherPrimary.style";
 import useWeatherPrimary from "./weatherPrimary.hook";
 import Geolocation from "../../icons/Geolocation/Geolocation";
 import Dots from "@/app/icons/Dots/Dots";
-import CentralModal from "../CentralModal/centralModal";
 
 export const WeatherPrimary = () => {
-  const {
-    current,
-    formattedDate,
-    handleClick,
-    location,
-    handleModal,
-    openModal,
-    setOpenModal,
-  } = useWeatherPrimary();
+  const { current, formattedDate, handleClick, location, handleModal } =
+    useWeatherPrimary();
 
   return (
     <S.Wrap>
-      {openModal && <CentralModal setOpenModal={setOpenModal} />}
       <div>
         <S.Header>
           {formattedDate && <S.Date>{formattedDate}</S.Date>}

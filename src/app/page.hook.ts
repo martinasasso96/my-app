@@ -26,7 +26,6 @@ const usePage = () => {
       refetchCurrent({
         city: city || `${lat},${lon}`,
         onSuccess: (data: ICurrentResponse) => {
-          console.log("current = ", data);
           dispatch(changeLocationAction(data?.location));
           dispatch(changeCurrentAction(data?.current));
           setLoading(false);

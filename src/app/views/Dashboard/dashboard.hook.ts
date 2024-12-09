@@ -13,6 +13,12 @@ export const useDashboard = () => {
   const current = useSelector(
     (state: IWeatherData) => state?.weatherData?.current
   );
+  const showCityModal = useSelector(
+    (state: IWeatherData) => state?.weatherData?.showCityModal
+  );
+  const showError = useSelector(
+    (state: IWeatherData) => state?.weatherData?.error?.code
+  );
 
   setTimeout(() => {
     setLoading(false);
@@ -23,5 +29,5 @@ export const useDashboard = () => {
     getUserLocation();
   }, []);
 
-  return { location, current, loading };
+  return { location, current, loading, showCityModal, showError };
 };

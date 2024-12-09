@@ -77,10 +77,22 @@ export const Box = styled.div`
 export const Modal = styled.div`
   background: white;
   width: 100%;
-  min-height: 407px;
   height: fit-content;
   border-radius: 25px;
   padding: 25px;
+  box-shadow: 0px 0px 30px #4881ae;
+
+  @media (min-width: ${breakpoints.tablet}) {
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+  }
+`;
+
+export const CloseWrap = styled.div`
+  position: absolute;
+  width: calc(100% - 325px);
+  padding-right: 25px;
 
   @media (min-width: ${breakpoints.tablet}) {
   }

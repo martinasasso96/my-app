@@ -2,7 +2,7 @@ import { breakpoints } from "@/app/components/components.models";
 import styled from "styled-components";
 
 export const PageLoader = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -24,6 +24,19 @@ export const Top = styled.div`
   width: 100%;
   display: flex;
   gap: 30px;
+
+  @media (min-width: ${breakpoints.tablet}) {
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+  }
+`;
+
+export const Bottom = styled.div`
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
 
   @media (min-width: ${breakpoints.tablet}) {
   }

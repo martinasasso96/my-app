@@ -9,8 +9,6 @@ export const Days = () => {
   const { days, handleClick, forecast, openModal, setOpenModal, date } =
     useDays();
 
-  console.log("XX F = ", forecast);
-
   return (
     <S.Container>
       {openModal && <ModalDays setOpenModal={setOpenModal} />}

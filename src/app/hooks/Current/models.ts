@@ -3,6 +3,9 @@ export interface ICurrent {
   wind_kph?: string;
   humidity?: string;
   cloud?: string;
+  condition?: {
+    code?: string;
+  };
 }
 
 export interface ILocation {
@@ -18,6 +21,10 @@ export interface ILocation {
 export interface ICurrentResponse {
   current: ICurrent;
   location: ILocation;
+  error: {
+    code: number;
+    message: string;
+  };
 }
 
 export interface ICurrentPayload {

@@ -1,13 +1,13 @@
 import { formatDate } from "../components.utils";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { IWeatherData } from "@/app/store/store.models";
-import usePage from "@/app/page.hook";
-import { useState } from "react";
 import { useView } from "@/app/views/views.hook";
+import { changeShowCityModalAction } from "@/app/store/weatherActions";
+import { SELECT_CITY_TYPE } from "../SelectCity/selectCity.models";
 
 const useWeatherPrimary = () => {
-  const [openModal, setOpenModal] = useState<boolean>(false);
   const { getUserLocation } = useView();
+  const dispatch = useDispatch();
 
   const today = new Date();
   const formattedDate: string = formatDate(today);
@@ -25,7 +25,12 @@ const useWeatherPrimary = () => {
   };
 
   const handleModal = () => {
-    setOpenModal(true);
+    dispatch(
+      changeShowCityModalAction({
+        state: true,
+        type: SELECT_CITY_TYPE.CURRENT,
+      })
+    );
   };
 
   return {
@@ -34,8 +39,6 @@ const useWeatherPrimary = () => {
     handleClick,
     location,
     handleModal,
-    openModal,
-    setOpenModal,
   };
 };
 
