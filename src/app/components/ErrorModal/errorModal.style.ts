@@ -2,19 +2,18 @@ import styled from "styled-components";
 import { breakpoints } from "../components.models";
 
 export const Wrap = styled.div`
-  padding: 150px;
+  padding: 15px;
+  margin: -30px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin: -45px;
   height: 100vh;
   width: 100vw;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
+    padding: 150px;
+    margin: -45px;
   }
 `;
 
@@ -28,20 +27,15 @@ export const Modal = styled.div`
 
   @media (min-width: ${breakpoints.tablet}) {
   }
-
-  @media (min-width: ${breakpoints.desktop}) {
-  }
 `;
 
 export const CloseWrap = styled.div`
   position: absolute;
-  width: calc(100% - 325px);
+  width: calc(100vw - 325px);
   padding-right: 25px;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
+    width: calc(100vw - 325px);
   }
 `;
 
@@ -52,12 +46,10 @@ export const Close = styled.div`
   border-radius: 100px;
   padding: 10px;
   color: black;
-  margin-left: calc(100% - 50px);
+  margin-left: calc(100vw - 125px);
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
+    margin-left: calc(100% - 50px);
   }
 `;
 
@@ -78,8 +70,5 @@ export const IconError = styled.div`
   }
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
   }
 `;

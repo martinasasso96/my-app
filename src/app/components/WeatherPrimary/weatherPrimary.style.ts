@@ -15,8 +15,7 @@ export const Wrap = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Header = styled.div`
@@ -29,8 +28,7 @@ export const Header = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const IconButton = styled.button`
@@ -40,8 +38,7 @@ export const IconButton = styled.button`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const GeoButton = styled.button`
@@ -56,8 +53,7 @@ export const GeoButton = styled.button`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Date = styled.span`
@@ -68,8 +64,7 @@ export const Date = styled.span`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const City = styled.span`
@@ -82,8 +77,7 @@ export const City = styled.span`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Temperature = styled.span`
@@ -96,6 +90,5 @@ export const Temperature = styled.span`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;

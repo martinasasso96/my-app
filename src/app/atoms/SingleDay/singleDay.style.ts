@@ -15,8 +15,7 @@ export const Wrap = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const WeekDay = styled.span`
@@ -27,8 +26,7 @@ export const WeekDay = styled.span`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Day = styled.span`
@@ -38,8 +36,7 @@ export const Day = styled.span`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const IconWrap = styled.div`
@@ -50,8 +47,7 @@ export const IconWrap = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const TempWrap = styled.div<{ $iscolumn: boolean }>`
@@ -63,8 +59,7 @@ export const TempWrap = styled.div<{ $iscolumn: boolean }>`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const TempSpace = styled.div<{ $iscolumn: boolean }>`
@@ -85,6 +80,5 @@ export const Temp = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;

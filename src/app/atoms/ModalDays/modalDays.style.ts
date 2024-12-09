@@ -11,8 +11,7 @@ export const Wrap = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Modal = styled.div`
@@ -29,8 +28,7 @@ export const Modal = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Option = styled.div<{ selected: boolean }>`
@@ -53,6 +51,5 @@ export const Option = styled.div<{ selected: boolean }>`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;

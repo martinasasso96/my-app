@@ -14,9 +14,6 @@ export const PageLoader = styled.div`
 
   @media (min-width: ${breakpoints.tablet}) {
   }
-
-  @media (min-width: ${breakpoints.desktop}) {
-  }
 `;
 
 export const Top = styled.div`
@@ -24,11 +21,10 @@ export const Top = styled.div`
   width: 100%;
   display: flex;
   gap: 30px;
+  flex-direction: column;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
+    flex-direction: row;
   }
 `;
 
@@ -39,8 +35,5 @@ export const Bottom = styled.div`
   margin-top: 30px;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
   }
 `;

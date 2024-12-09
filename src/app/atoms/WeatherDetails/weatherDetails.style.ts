@@ -15,8 +15,7 @@ export const Wrap = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 
   hr:last-child {
     display: none;
@@ -32,8 +31,7 @@ export const Divider = styled.hr`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Param = styled.div`
@@ -45,6 +43,5 @@ export const Param = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;

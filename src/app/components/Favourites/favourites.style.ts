@@ -8,14 +8,12 @@ export const Wrap = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 400px;
-  width: 40%;
+  width: 100%;
   background: white;
   border-radius: 25px;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
+    width: 40%;
   }
 `;
 
@@ -26,9 +24,6 @@ export const TitleBar = styled.div`
   justify-content: space-between;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
   }
 `;
 
@@ -41,9 +36,6 @@ export const Title = styled.h2`
   color: #4881ae;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
   }
 `;
 
@@ -60,9 +52,6 @@ export const BoxWrap = styled.div`
   scrollbar-width: none;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
   }
 `;
 
@@ -83,9 +72,6 @@ export const Box = styled.div`
 
   @media (min-width: ${breakpoints.tablet}) {
   }
-
-  @media (min-width: ${breakpoints.desktop}) {
-  }
 `;
 
 export const Stats = styled.div`
@@ -100,9 +86,6 @@ export const Stats = styled.div`
 
   @media (min-width: ${breakpoints.tablet}) {
   }
-
-  @media (min-width: ${breakpoints.desktop}) {
-  }
 `;
 
 export const AddBox = styled.div`
@@ -115,8 +98,5 @@ export const AddBox = styled.div`
   color: black;
 
   @media (min-width: ${breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
   }
 `;

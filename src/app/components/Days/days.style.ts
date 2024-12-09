@@ -13,8 +13,7 @@ export const Container = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Wrap = styled.div`
@@ -28,8 +27,7 @@ export const Wrap = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;
 
 export const Settings = styled.div`
@@ -44,6 +42,5 @@ export const Settings = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
-  }
+  
 `;

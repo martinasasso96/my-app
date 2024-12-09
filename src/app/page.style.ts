@@ -10,7 +10,4 @@ export const PageWrapper = styled.div<{ src: string }>`
 
   @media (min-width: ${breakpoints.tablet}) {
   }
-
-  @media (min-width: ${breakpoints.desktop}) {
-  }
 `;
